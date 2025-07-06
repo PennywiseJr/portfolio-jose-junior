@@ -45,6 +45,12 @@ header h1 {
   cursor: pointer;
 }
 
+/* Responsividade */
+@media (max-width: 768px) {
+  #menu-toggle {
+    display: block;
+  }
+  
 /* Menu de navegação */
 .nav-menu {
   display: flex;
@@ -70,11 +76,7 @@ header h1 {
   background: #005f99;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-  #menu-toggle {
-    display: block;
-  }
+
 
   .nav-menu {
     display: none;
