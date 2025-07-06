@@ -35,7 +35,13 @@ header h1 {
   font-size: 1.5rem;
 }
 
-/* Botão do menu (hambúrguer) */
+/* Responsividade */
+@media (max-width: 768px) {
+  #menu-toggle {
+    display: block;
+  }
+
+  /* Botão do menu (hambúrguer) */
 #menu-toggle {
   display: none;
   background: transparent;
@@ -45,12 +51,6 @@ header h1 {
   cursor: pointer;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-  #menu-toggle {
-    display: block;
-  }
-  
 /* Menu de navegação */
 .nav-menu {
   display: flex;
@@ -75,8 +75,6 @@ header h1 {
 .nav-menu a.active {
   background: #005f99;
 }
-
-
 
   .nav-menu {
     display: none;
