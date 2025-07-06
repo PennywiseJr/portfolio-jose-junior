@@ -1,0 +1,146 @@
+/* Reset simples */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-image: url("../img/fundo.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  background-color: black;
+
+  color: #333;
+  padding: 20px;
+}
+
+header {
+  background: #007acc;
+  color: white;
+  padding: 10px 20px;
+  position: relative;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 8px;
+  border-radius: 4px;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background: #005f99;
+}
+
+main {
+  margin-top: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 0.9em;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px 0;
+}
+.social-links {
+  margin-top: 10px;
+}
+
+.social-links a {
+  color: white;
+  font-size: 1.4em;
+  margin: 0 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ffd700;
+  transform: scale(1.2);
+}
+
+/* Formulário */
+form label {
+  display: block;
+  margin: 15px 0 5px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+form button {
+  margin-top: 15px;
+  background: #007acc;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #005f99;
+}
+
+/* Menu Toggle (botão mobile) */
+#menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.8em;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    background: #007acc;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 150px;
+    display: none;
+    border-radius: 5px;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  #menu-toggle {
+    display: block;
+  }
+}

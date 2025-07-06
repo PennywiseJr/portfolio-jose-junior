@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Página de contato - portfólio de José Junior"
+    />
+    <title>Contato - José Junior</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Portfólio de José Junior</h1>
+      <button id="menu-toggle" aria-label="Abrir menu">☰</button>
+      <nav id="nav-menu" class="nav-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Sobre</a></li>
+          <li><a href="portfolio.html">Portfólio</a></li>
+          <li><a href="contact.html" class="active">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Fale comigo</h2>
+        <form id="contactForm" action="#" method="POST" novalidate>
+          <label for="nome">Nome:</label>
+          <input
+            type="text"
+            name="nome"
+            id="nome"
+            placeholder="Seu nome completo"
+            autocomplete="name"
+            required
+          />
+
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="seuemail@exemplo.com"
+            autocomplete="email"
+            required
+          />
+
+          <label for="mensagem">Mensagem:</label>
+          <textarea
+            name="mensagem"
+            id="mensagem"
+            rows="5"
+            placeholder="Digite sua mensagem"
+            autocomplete="off"
+            required
+          ></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
+        <p id="formStatus"></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 José Junior - Todos os direitos reservados.</p>
+
+      <div class="social-links">
+        <a href="https://www.facebook.com/seuusuario" target="_blank">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/seuusuario" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
