@@ -35,13 +35,7 @@ header h1 {
   font-size: 1.5rem;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-  #menu-toggle {
-    display: block;
-  }
-
-  /* Botão do menu (hambúrguer) */
+/* Botão do menu (hambúrguer) - Escondido no desktop */
 #menu-toggle {
   display: none;
   background: transparent;
@@ -51,7 +45,7 @@ header h1 {
   cursor: pointer;
 }
 
-/* Menu de navegação */
+/* Menu de navegação padrão (desktop) */
 .nav-menu {
   display: flex;
 }
@@ -75,6 +69,13 @@ header h1 {
 .nav-menu a.active {
   background: #005f99;
 }
+
+/* Responsividade */
+@media (max-width: 768px) {
+  
+  #menu-toggle {
+    display: block; /* Botão só aparece no mobile */
+  }
 
   .nav-menu {
     display: none;
