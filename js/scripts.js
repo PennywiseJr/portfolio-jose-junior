@@ -1,3 +1,12 @@
+// scripts.js
+
+const toggleButton = document.getElementById("menu-toggle");
+const navMenu = document.getElementById("nav-menu");
+
+toggleButton.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+});
+
 const contactForm = document.getElementById("contactForm");
 const statusMsg = document.getElementById("formStatus");
 
