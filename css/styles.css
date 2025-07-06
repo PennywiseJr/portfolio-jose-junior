@@ -1,45 +1,51 @@
-/* Reset */
+/* Reset: Remove margens e preenchimentos padrão e define box-sizing para facilitar o controle de layout */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Corpo */
+/* Corpo da página */
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  padding: 20px;
+  font-family: Arial, sans-serif; /* Fonte base */
+  line-height: 1.6; /* Espaçamento de linha para melhor leitura */
+  padding: 20px; /* Espaço interno */
+
+  /* Fundo com imagem */
   background-image: url("../img/fundo.jpg");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-color: black;
-  color: #333;
-  min-height: 100vh;
+  background-size: cover; /* Cobre toda a área, mantendo proporção */
+  background-attachment: fixed; /* Fundo fixo na tela (funciona em desktop) */
+
+  background-color: black; /* Cor de fundo para caso a imagem não carregue */
+  color: #333; /* Cor padrão do texto */
+  min-height: 100vh; /* Garante que o body ocupe toda a altura da tela */
 }
 
-/* Header */
+/* Cabeçalho */
 header {
-  background: #007acc;
-  color: white;
-  padding: 10px 20px;
+  background: #007acc; /* Azul vibrante */
+  color: white; /* Texto branco */
+  padding: 10px 20px; /* Espaçamento interno */
   position: relative;
+
+  /* Layout flexível para alinhar título e botão */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-radius: 6px;
+
+  border-radius: 6px; /* Bordas arredondadas */
 }
 
-/* Título */
+/* Título no cabeçalho */
 header h1 {
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* Tamanho da fonte */
 }
 
-/* Botão do menu (hambúrguer) - Escondido no desktop */
+/* Botão do menu (hambúrguer) - só visível no mobile */
 #menu-toggle {
-  display: none;
+  display: none; /* Escondido no desktop */
   background: transparent;
   border: none;
   color: white;
@@ -49,13 +55,13 @@ header h1 {
 
 /* Menu de navegação padrão (desktop) */
 .nav-menu {
-  display: flex;
+  display: flex; /* Horizontal */
 }
 
 .nav-menu ul {
-  list-style: none;
+  list-style: none; /* Remove marcadores */
   display: flex;
-  gap: 15px;
+  gap: 15px; /* Espaço entre itens */
 }
 
 .nav-menu a {
@@ -64,27 +70,28 @@ header h1 {
   font-weight: bold;
   padding: 5px 8px;
   border-radius: 4px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease; /* Transição suave no hover */
 }
 
+/* Efeito ao passar mouse ou no link ativo */
 .nav-menu a:hover,
 .nav-menu a.active {
-  background: #005f99;
+  background: #005f99; /* Azul mais escuro */
 }
 
-/* Main */
+/* Conteúdo principal */
 main {
   margin-top: 20px;
-  background: white;
+  background: white; /* Fundo branco */
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  max-width: 800px;
-  margin-left: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+  max-width: 800px; /* Largura máxima */
+  margin-left: auto; /* Centraliza horizontalmente */
   margin-right: auto;
 }
 
-/* Footer */
+/* Rodapé fixo na base da tela */
 footer {
   position: fixed;
   bottom: 0;
@@ -93,10 +100,11 @@ footer {
   text-align: center;
   font-size: 0.9em;
   color: #fff;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.8); /* Fundo semi-transparente */
   padding: 10px 0;
 }
 
+/* Ícones de redes sociais no rodapé */
 .social-links {
   margin-top: 10px;
 }
@@ -105,22 +113,24 @@ footer {
   color: white;
   font-size: 1.4em;
   margin: 0 10px;
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease; /* Animação ao passar mouse */
 }
 
 .social-links a:hover {
-  color: #ffd700;
-  transform: scale(1.2);
+  color: #ffd700; /* Dourado */
+  transform: scale(1.2); /* Aumenta o ícone */
 }
 
-/* Formulário */
+/* Estilos do formulário */
 form {
   max-width: 400px;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.95); /* Fundo branco translúcido */
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+
+  /* Layout em coluna com espaçamento entre os elementos */
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -136,12 +146,15 @@ form textarea {
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
-  resize: vertical;
+  resize: vertical; /* Permite ajustar altura do textarea */
   font-size: 1rem;
+
+  /* Sombra suave para destacar */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Efeito ao focar nos campos do formulário */
 form input:focus,
 form textarea:focus {
   border-color: #007acc;
@@ -149,6 +162,7 @@ form textarea:focus {
   box-shadow: 0 0 5px rgba(0, 122, 204, 0.5);
 }
 
+/* Botão de envio do formulário */
 form button {
   background: #007acc;
   color: white;
@@ -164,24 +178,27 @@ form button:hover {
   background: #005f99;
 }
 
+/* Mensagem de status do formulário */
 #formStatus {
   margin-top: 10px;
   font-weight: bold;
 }
 
-/* Responsividade */
+/* Responsividade para telas menores */
 @media (max-width: 768px) {
-  /* Corrige o fundo para mobile */
+  /* Ajusta o fundo para funcionar bem no mobile */
   body {
-    background-attachment: scroll;
+    background-attachment: scroll; /* Não fixo para evitar problemas em mobile */
     background-size: cover;
     background-position: center center;
   }
 
+  /* Exibe botão do menu no mobile */
   #menu-toggle {
-    display: block; /* Botão só aparece no mobile */
+    display: block;
   }
 
+  /* Menu escondido inicialmente */
   .nav-menu {
     display: none;
     flex-direction: column;
@@ -194,6 +211,7 @@ form button:hover {
     padding: 10px;
   }
 
+  /* Menu visível quando ativo */
   .nav-menu.active {
     display: flex;
   }

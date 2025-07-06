@@ -1,49 +1,86 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Página sobre José Junior - portfólio pessoal">
-  <title>Sobre - Portfólio de José Junior</title>
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+  <head>
+    <!-- Importa ícones do Font Awesome para redes sociais e outros -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <meta charset="UTF-8" />
+    <!-- Configura a viewport para garantir responsividade em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Descrição para SEO e buscas -->
+    <meta
+      name="description"
+      content="Página sobre José Junior - portfólio pessoal"
+    />
+    <title>Sobre - Portfólio de José Junior</title>
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Título principal do site -->
+      <h1>Portfólio de José Junior</h1>
 
-  <header>
-    <h1>Portfólio de José Junior</h1>
-    <button id="menu-toggle" aria-label="Abrir menu">☰</button>
+      <!-- Botão do menu hamburguer para navegação mobile -->
+      <button id="menu-toggle" aria-label="Abrir menu">☰</button>
 
-    <!-- Corrigido: Adicionado id="nav-menu" para funcionar com o JS -->
-    <nav id="nav-menu" class="nav-menu">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">Sobre</a></li>
-        <li><a href="portfolio.html">Portfólio</a></li>
-        <li><a href="contact.html">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
+      <!-- Navegação principal do site
+           id="nav-menu" para funcionar com o script de toggle -->
+      <nav id="nav-menu" class="nav-menu">
+        <ul>
+          <!-- Links para as páginas do site -->
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">Sobre</a></li>
+          <!-- Página atual destacada -->
+          <li><a href="portfolio.html">Portfólio</a></li>
+          <li><a href="contact.html">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <main>
-    <section>
-      <h2>Sobre mim</h2>
-      <p>
-        Estudante de Engenharia de Software, impulsionado pela paixão por
-        tecnologia e pela constante busca por conhecimento.
-      </p>
-    </section>
-  </main>
+    <main>
+      <section>
+        <h2>Sobre mim</h2>
+        <p>
+          Estudante de Engenharia de Software, impulsionado pela paixão por
+          tecnologia e pela constante busca por conhecimento.
+        </p>
+      </section>
+    </main>
 
- <footer>
-    <p>© 2025 José Junior - Todos os direitos reservados.</p>
-    <div class="social-links">
-      <a href="https://www.facebook.com/seuusuario" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com/seuusuario" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://github.com/seuusuario" target="_blank"><i class="fab fa-github"></i></a>
-    </div>
-  </footer>
+    <footer>
+      <!-- Rodapé com direitos autorais -->
+      <p>© 2025 José Junior - Todos os direitos reservados.</p>
 
-  <script src="js/scripts.js"></script>
-</body>
+      <!-- Links para redes sociais com ícones do Font Awesome -->
+      <div class="social-links">
+        <a
+          href="https://www.facebook.com/seuusuario"
+          target="_blank"
+          aria-label="Facebook"
+        >
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a
+          href="https://www.instagram.com/seuusuario"
+          target="_blank"
+          aria-label="Instagram"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a
+          href="https://github.com/seuusuario"
+          target="_blank"
+          aria-label="GitHub"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </footer>
+
+    <!-- Link para o arquivo JavaScript externo -->
+    <script src="js/scripts.js"></script>
+  </body>
 </html>

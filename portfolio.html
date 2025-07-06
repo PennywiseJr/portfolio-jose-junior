@@ -1,48 +1,82 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Portfólio de projetos de José Junior" />
-  <title>Portfólio - José Junior</title>
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
-<body>
+  <head>
+    <!-- Link para os ícones do Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <!-- Charset para garantir a codificação correta dos caracteres -->
+    <meta charset="UTF-8" />
+    <!-- Meta tag para tornar o site responsivo em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Descrição para SEO -->
+    <meta name="description" content="Portfólio de projetos de José Junior" />
+    <!-- Título da página -->
+    <title>Portfólio - José Junior</title>
+    <!-- Link para o arquivo de estilos CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Cabeçalho do site contendo título e menu -->
+    <header>
+      <!-- Título principal -->
+      <h1>Portfólio de José Junior</h1>
+      <!-- Botão para alternar o menu em telas pequenas (mobile) -->
+      <button id="menu-toggle" aria-label="Abrir menu">☰</button>
 
-  <header>
-    <h1>Portfólio de José Junior</h1>
-    <button id="menu-toggle" aria-label="Abrir menu">☰</button>
+      <!-- Menu de navegação -->
+      <!-- O id "nav-menu" é importante para controlar a visibilidade via JavaScript -->
+      <nav id="nav-menu" class="nav-menu">
+        <ul>
+          <!-- Links para as páginas do site -->
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Sobre</a></li>
+          <li><a href="portfolio.html" class="active">Portfólio</a></li>
+          <li><a href="contact.html">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <!-- Corrigido: Adicionado id="nav-menu" para o menu mobile funcionar -->
-    <nav id="nav-menu" class="nav-menu">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">Sobre</a></li>
-        <li><a href="portfolio.html" class="active">Portfólio</a></li>
-        <li><a href="contact.html">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- Conteúdo principal -->
+    <main>
+      <section>
+        <h2>Meus Projetos</h2>
+        <!-- Lista simples de projetos -->
+        <ul>
+          <li><strong>Projeto 1:</strong> Website para uma pequena empresa.</li>
+        </ul>
+      </section>
+    </main>
 
-  <main>
-    <section>
-      <h2>Meus Projetos</h2>
-      <ul>
-        <li><strong>Projeto 1:</strong> Website para uma pequena empresa.</li>
-      </ul>
-    </section>
-  </main>
+    <!-- Rodapé com direitos autorais e redes sociais -->
+    <footer>
+      <p>© 2025 José Junior - Todos os direitos reservados.</p>
 
-  <footer>
-    <p>© 2025 José Junior - Todos os direitos reservados.</p>
-    <div class="social-links">
-      <a href="https://www.facebook.com/seuusuario" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com/seuusuario" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://github.com/seuusuario" target="_blank"><i class="fab fa-github"></i></a>
-    </div>
-  </footer>
+      <div class="social-links">
+        <!-- Links para redes sociais com ícones -->
+        <a
+          href="https://www.facebook.com/seuusuario"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a
+          href="https://www.instagram.com/seuusuario"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a
+          href="https://github.com/seuusuario"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fab fa-github"></i
+        ></a>
+      </div>
+    </footer>
 
-  <script src="js/scripts.js"></script>
-</body>
+    <!-- Importa o arquivo JavaScript com funcionalidades -->
+    <script src="js/scripts.js"></script>
+  </body>
 </html>

@@ -1,46 +1,86 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Página inicial do portfólio pessoal de José Junior">
-  <title>Home - Portfólio de José Junior</title>
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+  <head>
+    <!-- Link para os ícones do Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <!-- Definição do charset -->
+    <meta charset="UTF-8" />
+    <!-- Meta para tornar a página responsiva em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Descrição para SEO -->
+    <meta
+      name="description"
+      content="Página inicial do portfólio pessoal de José Junior"
+    />
+    <!-- Título da página -->
+    <title>Home - Portfólio de José Junior</title>
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Cabeçalho do site -->
+    <header>
+      <!-- Título do site -->
+      <h1>Portfólio de José Junior</h1>
+      <!-- Botão hambúrguer para abrir/fechar o menu em telas pequenas -->
+      <button id="menu-toggle" aria-label="Abrir menu">☰</button>
 
-  <header>
-    <h1>Portfólio de José Junior</h1>
-    <button id="menu-toggle" aria-label="Abrir menu">☰</button>
-    
-    <!-- Adicionado id="nav-menu" para funcionar com o JS -->
-    <nav id="nav-menu" class="nav-menu">
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">Sobre</a></li>
-        <li><a href="portfolio.html">Portfólio</a></li>
-        <li><a href="contact.html">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
+      <!-- Menu de navegação -->
+      <!-- O id é usado para manipulação via JavaScript -->
+      <nav id="nav-menu" class="nav-menu">
+        <ul>
+          <!-- Links do menu, o item ativo recebe a classe "active" -->
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">Sobre</a></li>
+          <li><a href="portfolio.html">Portfólio</a></li>
+          <li><a href="contact.html">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <main>
-    <section>
-      <h2>Bem-vindo!</h2>
-      <p>Este é meu site pessoal onde compartilho meus projetos e experiências.</p>
-    </section>
-  </main>
+    <!-- Conteúdo principal da página -->
+    <main>
+      <section>
+        <h2>Bem-vindo!</h2>
+        <p>
+          Este é meu site pessoal onde compartilho meus projetos e experiências.
+        </p>
+      </section>
+    </main>
 
-  <footer>
-    <p>© 2025 José Junior - Todos os direitos reservados.</p>
-    <div class="social-links">
-      <a href="https://www.facebook.com/seuusuario" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com/seuusuario" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://github.com/seuusuario" target="_blank"><i class="fab fa-github"></i></a>
-    </div>
-  </footer>
+    <!-- Rodapé fixo com direitos autorais e links sociais -->
+    <footer>
+      <p>© 2025 José Junior - Todos os direitos reservados.</p>
+      <div class="social-links">
+        <!-- Links para redes sociais, abrem em nova aba -->
+        <a
+          href="https://www.facebook.com/seuusuario"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a
+          href="https://www.instagram.com/seuusuario"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a
+          href="https://github.com/seuusuario"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </footer>
 
-  <script src="js/scripts.js"></script>
-</body>
+    <!-- Inclusão do arquivo JavaScript para funcionalidades interativas -->
+    <script src="js/scripts.js"></script>
+  </body>
 </html>
