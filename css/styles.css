@@ -12,10 +12,12 @@ body {
   padding: 20px;
   background-image: url("../img/fundo.jpg");
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center center;
   background-size: cover;
+  background-attachment: fixed;
   background-color: black;
   color: #333;
+  min-height: 100vh;
 }
 
 /* Header */
@@ -35,7 +37,7 @@ header h1 {
   font-size: 1.5rem;
 }
 
-/* Botão do menu (hambúrguer) - Escondido no desktop */
+/* Botão do menu (hambúrguer) */
 #menu-toggle {
   display: none;
   background: transparent;
@@ -73,7 +75,7 @@ header h1 {
 /* Responsividade */
 @media (max-width: 768px) {
   #menu-toggle {
-    display: block; /* Botão só aparece no mobile */
+    display: block;
   }
 
   .nav-menu {
@@ -95,6 +97,10 @@ header h1 {
   .nav-menu ul {
     flex-direction: column;
     gap: 10px;
+  }
+
+  body {
+    background-attachment: scroll; /* Evita lag em dispositivos móveis */
   }
 }
 
