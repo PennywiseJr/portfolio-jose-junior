@@ -37,7 +37,7 @@ header h1 {
   font-size: 1.5rem;
 }
 
-/* Botão do menu (hambúrguer) */
+/* Botão do menu (hambúrguer) - Escondido no desktop */
 #menu-toggle {
   display: none;
   background: transparent;
@@ -72,38 +72,6 @@ header h1 {
   background: #005f99;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-  #menu-toggle {
-    display: block;
-  }
-
-  .nav-menu {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background: #007acc;
-    border-radius: 5px;
-    width: 150px;
-    padding: 10px;
-  }
-
-  .nav-menu.active {
-    display: flex;
-  }
-
-  .nav-menu ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  body {
-    background-attachment: scroll; /* Evita lag em dispositivos móveis */
-  }
-}
-
 /* Main */
 main {
   margin-top: 20px;
@@ -111,6 +79,9 @@ main {
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Footer */
@@ -157,7 +128,6 @@ form {
 
 form label {
   font-weight: bold;
-  margin-bottom: 5px;
 }
 
 form input,
@@ -197,4 +167,39 @@ form button:hover {
 #formStatus {
   margin-top: 10px;
   font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  /* Corrige o fundo para mobile */
+  body {
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  #menu-toggle {
+    display: block; /* Botão só aparece no mobile */
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #007acc;
+    border-radius: 5px;
+    width: 150px;
+    padding: 10px;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
