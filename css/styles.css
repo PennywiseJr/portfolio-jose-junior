@@ -1,53 +1,104 @@
-/* Reset simples */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Corpo */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
+  padding: 20px;
   background-image: url("../img/fundo.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
   background-color: black;
-
   color: #333;
-  padding: 20px;
 }
 
+/* Header */
 header {
   background: #007acc;
   color: white;
   padding: 10px 20px;
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px;
 }
 
+/* Título */
 header h1 {
-  margin-bottom: 10px;
+  font-size: 1.5rem;
 }
 
-nav ul {
+/* Botão do menu (hambúrguer) */
+#menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.8em;
+  cursor: pointer;
+}
+
+/* Menu de navegação */
+.nav-menu {
+  display: flex;
+}
+
+.nav-menu ul {
   list-style: none;
   display: flex;
   gap: 15px;
 }
 
-nav ul li a {
+.nav-menu a {
   color: white;
   text-decoration: none;
   font-weight: bold;
   padding: 5px 8px;
   border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
+.nav-menu a:hover,
+.nav-menu a.active {
   background: #005f99;
 }
 
+/* Responsividade */
+@media (max-width: 768px) {
+  #menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #007acc;
+    border-radius: 5px;
+    width: 150px;
+    padding: 10px;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Main */
 main {
   margin-top: 20px;
   background: white;
@@ -55,6 +106,7 @@ main {
   border-radius: 5px;
 }
 
+/* Footer */
 footer {
   position: fixed;
   bottom: 0;
@@ -66,6 +118,7 @@ footer {
   background: rgba(0, 0, 0, 0.8);
   padding: 10px 0;
 }
+
 .social-links {
   margin-top: 10px;
 }
@@ -80,67 +133,4 @@ footer {
 .social-links a:hover {
   color: #ffd700;
   transform: scale(1.2);
-}
-
-/* Formulário */
-form label {
-  display: block;
-  margin: 15px 0 5px;
-}
-
-form input,
-form textarea {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-form button {
-  margin-top: 15px;
-  background: #007acc;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-form button:hover {
-  background: #005f99;
-}
-
-/* Menu Toggle (botão mobile) */
-#menu-toggle {
-  display: none;
-  background: transparent;
-  border: none;
-  color: white;
-  font-size: 1.8em;
-  cursor: pointer;
-  position: absolute;
-  top: 15px;
-  right: 20px;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    background: #007acc;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    width: 150px;
-    display: none;
-    border-radius: 5px;
-  }
-
-  nav ul.show {
-    display: flex;
-  }
-
-  #menu-toggle {
-    display: block;
-  }
 }
