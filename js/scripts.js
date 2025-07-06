@@ -46,3 +46,18 @@ function exibirMensagem(mensagem, cor) {
     statusMsg.textContent = "";
   }, 4000);
 }
+
+// Efeito extra: Destaque suave (fade) nos links do menu
+const menuLinks = document.querySelectorAll(".nav-menu a");
+
+menuLinks.forEach((link) => {
+  link.addEventListener("mouseenter", () => {
+    menuLinks.forEach((l) => {
+      if (l !== link) l.style.opacity = "0.5";
+    });
+  });
+
+  link.addEventListener("mouseleave", () => {
+    menuLinks.forEach((l) => (l.style.opacity = "1"));
+  });
+});
